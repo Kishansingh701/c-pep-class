@@ -1,1 +1,81 @@
+📚 Top Theoretical Interview Questions: C++ Operators
+1. What is the difference between endl and \n?
+The Interviewer is looking for: Knowledge of the Buffer.
+
+\n: It is a character that simply moves the cursor to the next line. It is faster.
+
+endl: It moves the cursor to the next line and flushes the output buffer. This means it forces the computer to show the output on the screen immediately.
+
+Verdict: Use \n for high-performance code and endl when you need to ensure the output is displayed right away.
+
+2. What is "Short-Circuiting" in Logical Operators?
+The Interviewer is looking for: Efficiency logic.
+
+In C++, for Logical AND (&&), if the first condition is false, the second condition is never checked because the result will be false anyway.
+
+In Logical OR (||), if the first condition is true, the second condition is skipped because the result is already guaranteed to be true.
+
+Importance: This prevents unnecessary calculations and can avoid errors (like dividing by zero in the second condition).
+
+3. What is the difference between Prefix and Postfix operators?
+The Interviewer is looking for: Timing of execution.
+
+Prefix (++a): "Change then Use." The value is incremented first, and then used in the expression.
+
+Postfix (a++): "Use then Change." The current value is used in the expression first, and then the increment happens.
+
+4. What is the "Scope Resolution Operator" (::)?
+The Interviewer is looking for: Global vs. Local variable knowledge.
+
+It is used to access a global variable when there is a local variable with the same name.
+
+It is also used to define a function outside of a class or to access static members of a class.
+
+Example: If you have a global int x and a local int x, you use ::x to refer to the global one.
+
+5. Can you explain "Operator Precedence" and "Associativity"?
+The Interviewer is looking for: How you handle complex expressions.
+
+Precedence: Determines which operator is evaluated first (e.g., * has higher precedence than +).
+
+Associativity: When two operators have the same precedence (like * and /), associativity determines the order (usually Left-to-Right).
+
+6. What is the difference between the Assignment operator (=) and Equality operator (==)?
+The Interviewer is looking for: Attention to syntax.
+
+=: It is an assignment operator used to store a value into a variable (e.g., a = 10).
+
+==: It is a relational operator used to compare two values. It returns true or false (e.g., if (a == 10)).
+
+7. What is the use of the sizeof operator?
+The Interviewer is looking for: Memory management basics.
+
+It is a compile-time operator that returns the size (in bytes) of a data type or a variable.
+
+Note: It is unique because even though it looks like a function, it is actually an operator.
+
+8. What are Bitwise Operators and why are they used?
+The Interviewer is looking for: Low-level programming awareness.
+
+Operators like & (AND), | (OR), ^ (XOR), and ~ (NOT) work on individual bits of a number.
+
+They are used in situations where performance is critical, such as embedded systems, encryption, or compression.
+
+9. What is the Ternary Operator and what is its advantage?
+The Interviewer is looking for: Ability to write clean, concise code.
+
+The ternary operator (? :) is a shorthand for an if-else statement.
+
+Syntax: condition ? expression1 : expression2;
+
+Advantage: It makes the code more readable and compact for simple assignments.
+
+10. Can we use the Modulo operator (%) with float/double values?
+The Interviewer is looking for: Specific language constraints.
+
+No. The % operator in C++ is strictly for integers.
+
+Using it with float or double will result in a compile-time error.
+
+(Pro Tip: If you really need the remainder of floating-point numbers, you use the fmod() function from the <cmath> library).
 
